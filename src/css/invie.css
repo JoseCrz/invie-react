@@ -156,31 +156,59 @@ input, textarea {
 }
 
 .guitarra {
-  padding: 10px;
-  margin: 20px;
+  padding: 10px 2em;
+  margin: 10px 0 40px;
   /*overflow: hidden;*/
   border: 1px solid #1F313C;
-  border-radius: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  min-height: 250px;
+  transition: .3s;
+  position: relative;
+}
+
+.guitarra:hover {
+  box-shadow: 10px 10px #1F313C;
+}
+
+.guitarra-name {
+  font-size: 3em;
+  margin: 0 0 .2em;
+  padding-bottom: .2em;
+  border-bottom: 2px dashed #1F313C;
+}
+
+.guitarra-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.guitarra:nth-of-type(even):hover {
+  box-shadow: -10px 10px #1F313C;
+}
+
+.guitarra:nth-of-type(even) {
+  justify-content: flex-end;
+}
+
+.guitarra:nth-of-type(even) .guitarra-image {
+  right: initial;
+  left: 0;
 }
 
 .guitarra ol {
   padding: 0;
+  list-style: none;
+  counter-reset: features;
 }
 
-.guitarra.b {
-  height: 190px;
+.guitarra li::before {
+  counter-increment: features;
+  content: counter(features) ". ";
 }
 
-.derecha {
-  float: right;
-  position: relative;
-  top: -127px;
-}
-
-.izquierda {
-  float: left;
-  position: relative;
-}
 
 .contenedor-guitarra-a {
   padding-left: 25px;
