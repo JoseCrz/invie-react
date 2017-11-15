@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../images/invie.png'
 
 class Portada extends Component {
   render () {
@@ -9,14 +8,16 @@ class Portada extends Component {
     <header id="header" className="header contenedor">
 
       <figure className="logo">
-        <img src={logo} width="186" height="60" alt="Invie Logo" />
+        <img src={this.props.logo} width="186" height="60" alt="Invie Logo" />
       </figure>
 
       <nav className="menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#guitarras">Guitarras</a></li>
-          <li><a href="precios.html">Precios</a></li>
+          {this.props.menu.map((item) => {
+            return (
+              <li><a href={item.href}>{item.title}</a></li>
+            )
+          })}
         </ul>
       </nav>
     </header>
