@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/invie.css';
+import './css/animations.css';
 import Invie from './Invie';
 import registerServiceWorker from './registerServiceWorker';
 import logoPortada from './images/invie.png'
@@ -9,6 +10,9 @@ import clasica from './images/invie-classic.png';
 import cheet from 'cheet.js';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+
+import easterA from './images/easter-a.png';
+import easterB from './images/easter-b.png';
 
 
 const initialState = {
@@ -73,6 +77,29 @@ const easter = {
       title: 'Home',
     },
   ],
+
+  guitarras: [
+    {
+      image: easterA,
+      alt: 'Guitarra padre de familia',
+      name: 'Invie Familiar',
+      features: [
+        'Lista para copiar a los Simpsons',
+        'Aire puro',
+        'Chistes malos'
+      ]
+    },
+    {
+      image: easterB,
+      alt: 'Guitarra Invie Classic',
+      name: 'Invie Classic',
+      features: [
+        'Estilo Vintage',
+        'Liviana',
+        '~S W A G~'
+      ]
+    }
+  ]
 }
 
 cheet('m i m i', () => {
