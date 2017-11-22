@@ -81,6 +81,37 @@ input, textarea {
   background-size: cover;
 }
 
+.portada.background.is-animated {
+  background-image: url("../images/hyrule.jpg");
+  background-repeat: no-repeat;
+  animation: background 20s linear infinite alternate;
+}
+
+@keyframes background {
+  0% {
+    background-size: 300%;
+    background-position: center;
+  }
+  20%{
+    background-position: right top;
+  }
+  40% {
+    background-size: 200%;
+    background-position: center;
+  }
+  60% {
+    background-position: left top;
+
+  }
+  80% {
+    background-position: left -500px;
+  }
+  100% {
+    background-position: right -500px;
+    background-size: 300%;
+  }
+}
+
 .button {
   border-radius: 10px;
   color: white;

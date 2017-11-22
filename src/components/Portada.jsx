@@ -13,7 +13,7 @@ function mapStateToProps (state) {
 class Portada extends Component {
   render () {
     return (
-      <section id="portada" className="portada background">
+      <section id="portada" className={`portada background ${this.props.isAnimated}`}>
         <header id="header" className="header contenedor">
           <figure className="logo">
             <img src={this.props.logo} width="186" height="60" alt="Invie Logo" />

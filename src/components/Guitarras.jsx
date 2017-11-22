@@ -11,7 +11,7 @@ function mapStateToProps (state) {
 class Guitarras extends Component {
   render () {
     return (
-      <section id="guitarras" class="guitarras contenedor">
+      <section id="guitarras" className="guitarras contenedor">
       <h2>Nuestras Guitarras</h2>
       {this.props.guitarras.map((guitarra, index) => {
         return (
