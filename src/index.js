@@ -4,7 +4,8 @@ import './css/invie.css';
 import './css/animations.css';
 import Invie from './Invie';
 import registerServiceWorker from './registerServiceWorker';
-import logoPortada from './images/invie.png'
+import logoPortada from './images/invie.png';
+import zeldaLogo from './images/zeldalogo.png';
 import acustica from './images/invie-acustica.png';
 import clasica from './images/invie-classic.png';
 import cheet from 'cheet.js';
@@ -74,11 +75,9 @@ const store = createStore(reducer, initialState);
 const easter = {
   isAnimated: 'is-animated',
   menu : [
-    {
-      href: 'index.html',
-      title: 'Home',
-    },
   ],
+
+  logoPortada: zeldaLogo,
 
   guitarras: [
     {
